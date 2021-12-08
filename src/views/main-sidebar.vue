@@ -55,7 +55,9 @@
         get () { return this.$store.state.common.sidebarFold }
       },
       menuList: {
-        get () { return this.$store.state.common.menuList },
+        get () { 
+          const menuList = [...this.$store.state.common.menuList]
+          return menuList.sort((first, second) => first.orderNum - second.orderNum) },
         set (val) { this.$store.commit('common/updateMenuList', val) }
       },
       menuActiveName: {

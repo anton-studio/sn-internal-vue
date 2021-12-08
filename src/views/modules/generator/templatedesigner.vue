@@ -50,7 +50,7 @@
         align="center"
         label="质量得分">
         <template slot-scope="scope">
-          <el-rate v-model="scope.row.ratings" disabled="true"></el-rate>
+          <el-rate v-model="scope.row.ratings" :disabled="true"></el-rate>
         </template>
       </el-table-column>
       <el-table-column

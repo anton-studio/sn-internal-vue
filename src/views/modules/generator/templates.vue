@@ -212,7 +212,7 @@ export default {
         return {
           ...item,
           startedDate: item.startedDate.split(' ') ? item.startedDate.split(' ')[0] : '',
-          finishedDate: item.finishedDate.split(' ') ? item.finishedDate.split(' ')[0] : '',
+          finishedDate: item.finishedDate && item.finishedDate.split(' ') ? item.finishedDate.split(' ')[0] : '',
           industryId: getIndustryNameById(item.industryId),
           designerId: getDesignerNameById(item.designerId)
         }
